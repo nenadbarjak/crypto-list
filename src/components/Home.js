@@ -39,7 +39,7 @@ const Home = () => {
 
     return (  
         <Container fluid className="pt-3">
-            <Table bordered>
+            <Table bordered style={{maxWidth: '960px'}}>
                 <thead>
                     <tr>
                         <th>#</th>

@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
+import { Redirect } from 'react-router-dom';
 
-const Profile = () => {
+const Profile = ({ loggedIn }) => {
     const [toggled, setToggled] = useState(false)
 
     // Added timestamp to the end of the URL to bypass the image caching and get a different image each time
@@ -13,8 +14,12 @@ const Profile = () => {
     
     let btnVariant = toggled ? "info" : "primary";
 
+    if (!loggedIn) {
+        return <Redirect to="/" />
+    }
+
     return (  
-        <Container>
+        <Container className="pt-3">
             <Card style={{maxWidth: '18rem', border: 'none'}} >
                 <Card.Img src={imgUrl} />
                 <Card.Body>
