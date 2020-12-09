@@ -1,9 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Header from './components/Header';
 
 const App = () => {
+    const [loggedIn, setLoggedIn] = useState(false)
+
+    const login = () => {
+        setLoggedIn(true)
+    }
+
     return (
         <div>
-            <h1>CRYPTO LIST</h1>
+            <Header 
+                loggedIn={loggedIn}
+                login={login}
+            />
         </div>
     );
 }
