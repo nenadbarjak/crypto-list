@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
+import Home from './components/Home';
 
 const App = () => {
     const [loggedIn, setLoggedIn] = useState(false)
@@ -14,6 +15,7 @@ const App = () => {
                 loggedIn={loggedIn}
                 login={login}
             />
+            <Home />
         </div>
     );
 }
