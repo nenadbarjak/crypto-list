@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Home from './components/Home';
+import Profile from './components/Profile';
 
 const App = () => {
     const [loggedIn, setLoggedIn] = useState(false)
@@ -16,6 +17,7 @@ const App = () => {
                 login={login}
             />
             <Home />
+            <Profile />
         </div>
     );
 }
